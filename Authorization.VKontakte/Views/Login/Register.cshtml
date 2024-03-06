@@ -1,0 +1,21 @@
+﻿@model ExternalLogin
+<div style="margin:30px">
+	<div class="text-center">
+		<main class="form-row">
+	<h1>External registration</h1>
+			<form method="post" asp-controller="Login" asp-action="RegisterExternal">
+				<div class="form-floating">
+					<h1 class="lead">Вход</h1>
+				</div>
+
+				<div class="form-floating">
+					<input asp-for="Email" type="text" class="form-control" id="validationDefault01" placeholder="email">
+					<span asp-validation-for="Email" class="text-danger"></span>
+				</div>
+			
+
+				<button class="btn btn-outline-primary" type="submit">Сохранить пользователя</button>
+			</form>
+		</main>
+	</div>
+</div>

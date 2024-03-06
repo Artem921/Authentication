@@ -1,0 +1,11 @@
+﻿@if (!User.Identity.IsAuthenticated)
+{
+    <a class="btn btn-outline-primary" asp-controller="Login" asp-action="Index" role="button">Authorization</a>
+}
+
+else
+{
+    <a class="btn btn-outline-primary" asp-controller="Welcome" asp-action="AdminWelcome" role="button">Admin</a>
+    <a class="btn btn-outline-primary" asp-controller="Welcome" asp-action="UserWelcome" role="button">User</a>
+    <a class="btn btn-outline-primary" asp-controller="Login" asp-action="LoginOut" role="button">Log Out</a>
+}
